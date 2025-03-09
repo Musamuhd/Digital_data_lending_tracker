@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Data Lending Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container" id="main-container">
+    <button id="logoutBtn" style="display: none;">Log out</button>
+    <h1>Digital Data Lending Tracker</h1>
+    <div id="landingContainer" style="display: none;">
+      <form id="lendingForm">
+        <input type="text" id="name" placeholder="Customer Name" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <input type="text" id="recipient" placeholder="Recipient Number" required>
+        <input type="text" id="dataAmount" placeholder="Data Amount (e.g., 1GB)" required>
+        <input type="text" id="amountDue" placeholder="Amount Due (₦)" required>
+        <button type="submit">Add Record</button>
+      </form>
+      <table id="recordsTable">
+        <thead>
+          <tr>
+            <th>Customer Name</th>
+            <th>Phone</th>
+            <th>Recipient</th>
+            <th>Data Amount</th>
+            <th>Amount Due</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div id="registerContainer" style="display: none;">
+      <h2>Setup a password to proceed</h2>
+      <p class="error" style="display: none;"></p>
+      <form id="registerForm">
+        <input type="password" id="password" placeholder="Create a new password" required>
+        <input type="password" id="passwordConfirmation" placeholder="Re-enter the password" required>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+
+    <div id="loginContainer">
+      <h2>Please Login</h2>
+      <p class="error" style="display: none;"></p>
+      <form id="loginForm">
+        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
